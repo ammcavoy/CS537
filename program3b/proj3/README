@@ -1,0 +1,23 @@
+basic_testcase: A base test case which inclues basic commands in the rule.
+
+simple_testcase: A test case with a valid, but exotic makefile.
+
+basic_cycle_testcase: A testcase with a direct cycle in the graph. THIS SHOULD FAIL.
+
+advanced_cycle_testcase: A testcase with a more indirect cycle. THIS SHOULD FAIL.
+
+line_size_testcase: A invalid case of target line buffer overflow. THIS SHOULD FAIL.
+
+whitespace_testcase: A special case of whitespaces in multilple lines.
+
+missing_colon: The target line is missing a colon between the target and dependencies. THIS SHOULD FAIL.
+
+missing_tab: The command line starts with spaces instead of a tab character. THIS SHOULD FAIL.
+
+null_character: The target line contains a null ('\0') character instead of a space between the dependencies. THIS SHOULD FAIL.
+
+modification_check: This testcase does a simple make, and then you must update the timestamp on one file and make sure that only the necessary rules are run on the second make. Read the instructions in the "makefile" for more details.
+
+many_rules: This testcase builds 1000 rules.
+
+many_commands: This testcase builds one rule with 1000 commands.
